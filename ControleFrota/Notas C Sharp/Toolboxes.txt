@@ -1,0 +1,54 @@
+Esse é o meu arquivo de Programação de Toolboxes de Visual Studio em C#.
+
+
+Toolbox:
+
+	Common Controls/Controles Comuns:
+
+		CheckBox: Um componente onde existem várias opções e é permitido marcar uma ou mais delas.
+
+
+		Label: Provê uma descrição run-time ou texto descriptivo para um control
+
+
+		NumericUpDown: Exibe um único valor numérico que o usuário pode acrescentar e decrementar clicando nos botões acima e abaixo do controle.
+
+			.value: Valor atual do controle numérico acima-abaixo. Por exemplo, colocar 5 significa que começa como cinco no padrão.
+
+			.Maximum: Indica o valor máximo para o controle numérico acima-abaixo.
+
+		PictureBox: 
+
+			 Propriedade Sizemode: Define a maneira que a imagem será exibida no formulário. Tem três opções:
+
+			 	- Normal: A imagem é exibida em seu tamanho normal e sempre é posicionada a partir do canto superior do componente; caso a imagem seja maior que Picturebox, ela será cortada.
+
+			 	- StretchImage: A imagem é ajustada automaticamente ao tamanho do PictureBox
+
+			 	- Autosize: o PictureBox altera seu tamanho automaticamente, para se ajustar ao tamanho da imagem.
+
+			 ComboBox: Exibe uma caixa de texto editável com uma lista suspensa de valores permitidos. 
+			 
+			 	Propriedades:
+
+			 	 .Items: Itens na caixa de combinação. São os valores permitidos da lista suspensa.
+
+			 	 .Locked: Especifica se é possivel editar o dado do controle na visão do formulário. Booleana Ler/Gravar. Configuração padrão é True/Verdadeiro, que permite editar, adicionar e deletar dados.
+
+			 	 .DropDownStyle: Permite apenas que items sejam selecionados. 
+
+			 	 	- DropDownList: Permite que items sejam apenas selecionados em uma lista. Também muda a aparência.
+
+		Textbox: Cria uma caixa de texto que permite ao usuário inserir texto, e provêm edição multi-linha e mascaração de texto de senha.
+
+			Propriedades:
+
+				Borderstyle: Altera o estilo da borda ao redor da Textbox.
+
+				Multiline: Controla se o texto no controle de edição pode ser extendido em mais de uma linha. Em outra palavras, ele permite que uma textbox ou um controle semelhante pode usar mais de uma linha. Tanto que ele abre a possibilidade de expandir o tamanho de um Textbox na vertical.
+				True: Permite que insiramos várias linhas. False: Apenas uma linha.	 	 	
+
+
+Containers:
+
+	Panel: Auxillia na composição do formulário, possibilitando agrupar vários componentes dentro dele, deixando o trabalho com um aspecto mais organizado.	Por exemplo, se eu deixar um panel com vários botões invisiveis, tanto o panel como os botões dentro dele desaparecerão.	

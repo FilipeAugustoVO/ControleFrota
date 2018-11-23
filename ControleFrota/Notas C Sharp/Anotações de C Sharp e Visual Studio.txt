@@ -1,0 +1,440 @@
+Visual Studio Anotações:
+
+Notas importantes:
+
+- Forms/Formas são Classes!
+
+
+
+Sequências e caracteres de escape: Combinação de caracteres, que consiste numa barra invertida (\), seguida por uma letra ou digitos que realizam uma determinada ação, como por exemplo: pular uma linha, inserir espaço, uma guia vertical, entre outras opções. Ver: https://msdn.microsoft.com/pt-br/library/h21280bw.aspx
+
+	Caracteres:
+		\a	Campainha (alerta)
+		\b	Backspace
+		\f	Avanço de página
+		\n	Nova linha. Quebra linha de uma string
+		\r	Retorno de carro
+		\t	Tabulação horizontal
+		\v	Tabulação vertical
+		\'	Aspas simples
+		\"	Aspas duplas
+		\\	Barra invertida
+		\?	Ponto de interrogação literal
+		\ ooo	Caractere ASCII em notação octal
+		\x hhhh	Caractere Unicode em notação hexadecimal, se esta sequência de escape é usada em uma constante de caractere largo ou uma literal de cadeia de caracteres Unicode.
+		Por exemplo, WCHAR f = L'\x4e00' ou WCHAR b[] = L"The Chinese character for one is \x4e00".
+		
+
+
+Toolbox:
+
+	Common Controls/Controles Comuns:
+
+		CheckBox: Um componente onde existem várias opções e é permitido marcar uma ou mais delas.
+
+
+		Label: Provê uma descrição run-time ou texto descriptivo para um control
+
+
+		NumericUpDown: Exibe um único valor numérico que o usuário pode acrescentar e decrementar clicando nos botões acima e abaixo do controle.
+
+			.value: Valor atual do controle numérico acima-abaixo. Por exemplo, colocar 5 significa que começa como cinco no padrão.
+
+			.Maximum: Indica o valor máximo para o controle numérico acima-abaixo.
+
+		PictureBox: 
+
+			 Propriedade Sizemode: Define a maneira que a imagem será exibida no formulário. Tem três opções:
+
+			 	- Normal: A imagem é exibida em seu tamanho normal e sempre é posicionada a partir do canto superior do componente; caso a imagem seja maior que Picturebox, ela será cortada.
+
+			 	- StretchImage: A imagem é ajustada automaticamente ao tamanho do PictureBox
+
+			 	- Autosize: o PictureBox altera seu tamanho automaticamente, para se ajustar ao tamanho da imagem.
+
+
+		ComboBox: Exibe uma caixa de texto editável com uma lista suspensa de valores permitidos. 
+			 
+			 	Propriedades:
+
+			 		.AutoCompleteCustomSource: 
+
+			 		.AutoCompleteMode:
+
+			 		.AutoCompleteSource:	
+
+				 	.Items: Itens na caixa de combinação. São os valores permitidos da lista suspensa. 
+
+				 	.Locked: Especifica se é possivel editar o dado do controle na visão do formulário. Booleana Ler/Gravar. Configuração padrão é True/Verdadeiro, que permite editar, adicionar e deletar dados.
+
+				 	.DropDownStyle: Permite apenas que items sejam selecionados.
+
+						- Dropdown: O valor padrão. indica que a porção do texto é editável e assim o usuário pode digitar qualquer valor na área de Texto da Combobox.
+
+				 	 	- DropDownList: Permite que items sejam apenas selecionados em uma lista. Também muda a aparência.
+
+				 	 	- Simple: Se o valor for definido como Simple a porção do Texto poderá ser editada e os valores da lista ficaram sempre visíveis.
+
+				 	 .DropDownHeight: Altura da área de dropdown.
+				 	 
+				 	 .DropDownWidth: Largura da área de dropdown.	
+
+
+				 	 Link úteis: 
+				 	 http://www.macoratti.net/11/01/c_cbo1.htm	
+				 	 https://www.dotnetperls.com/combobox
+				 	 https://stackoverflow.com/questions/11167861/combo-box-if-statement
+
+		Textbox: Cria uma caixa de texto que permite ao usuário inserir texto, e provêm edição multi-linha e mascaração de texto de senha.
+
+			Propriedades:
+
+				Borderstyle: Altera o estilo da borda ao redor da Textbox.
+
+				Multiline: Controla se o texto no controle de edição pode ser extendido em mais de uma linha. Em outra palavras, ele permite que uma textbox ou um controle semelhante pode usar mais de uma linha. Tanto que ele abre a possibilidade de expandir o tamanho de um Textbox na vertical.
+				True: Permite que insiramos várias linhas. False: Apenas uma linha.	 	 	
+
+
+Containers:
+
+	Panel: Auxillia na composição do formulário, possibilitando agrupar vários componentes dentro dele, deixando o trabalho com um aspecto mais organizado.	Por exemplo, se eu deixar um panel com vários botões invisiveis, tanto o panel como os botões dentro dele desaparecerão.	
+
+
+Propriedades:
+
+
+	AppendText: Exibe todo o conteúdo desejado simultaneamente.
+
+	Background Color: Altera cor do pano de fundo do aplicativo.
+
+		Nota: A cor bacaninha cinza do Windows é a cor Control, no System.
+
+
+	Border Style: Indica se o painel deve ter uma borda.
+	
+		Fixed Single: Impede o redimensionamento da border durante execução do programa, deixando-a fixa.	
+
+
+	Font: Altera a fonte de texto de formulários e tal, tipo de fonte, tamanho, etc.	
+
+
+	FormBorderStyle: Indica a aparência e ação  da borda e da barra de titulo da Forma.
+
+		FixedSingle: Impede redimensionamento da janela durante a execução do programa, deixando ela fixa.
+
+	Start Position: Determina a posição da forma quando ela aparece/inicia.
+
+		Center Screen: Deixa o formulário centralizado na tela quando estiver em execuão.
+
+	Icon: Altera icone do formulário na janela.			
+
+
+	MaximizeBox: Determina se a forma tem o botãozinho de maximize box ativo na janela.
+
+	Newline: String que denota nova linha. A mesma coisa que "\r\n" pra plataformas não-Unix, ou simplesmten \n para plataformas Unix.
+
+		Enviroment.Newline: Uma maneira "universal" de declarar Nova Linha, de modo que funciona em qualquer sistema operacional.
+
+	Leituras recomendadas: 
+	https://www.dotnetperls.com/newline
+	https://docs.microsoft.com/en-us/dotnet/api/system.environment.newline?view=netframework-4.7.2	
+
+
+	Sizemode: Acessada pelo componente PictureBox, temos acesso á propriedade SizeMode, na qual define a maneira em que a imagem será exibida no formulário. Ela tem as seguintes opções:
+
+		Normal - a imagem é exibida em seu tamanho normal e sempre é posicionada a partir do canto superior do componente; caso a imagem seja maior que a PictureBox, ela será cortada.
+
+		StretchImage - a imagem é ajustada automaticamente ao tamanho do PictureBox.
+
+		AutoSize - o PictureBox altera seu tamannho automaticamente, para se ajustar ao tamanho da imagem.
+
+	Text: Texto exibido no elemento.	
+
+
+
+Notas de programação C#:
+
+Componente: Ler esse artigo á seguir - https://msdn.microsoft.com/en-us/library/0b1dk63b.aspx
+
+	OpenFileDialog: Usado para selecionar e localizar arquivos em um computador.
+	
+	http://www.macoratti.net/10/11/c_opfd1.htm é ótimo pra explicar!
+
+	Propriedades do OpenFileDialog:
+
+		1- InitialDirectory - Representa o diretório a ser exibido quando a janela de diálogo aparecer pela primeira vez.
+		Ex: openFileDialog1.InitialDirectory = @"C:\";
+		Se a propriedade RestoreDirectory for definida como True a caixa de diálogo restaura o diretório atual antes de ser fechada.
+		Ex: openFileDialog1.RestoreDirectory = true;
+
+		2- Title - Usada para definir ou atribuir um título a janela de diálogo: Ex: openFileDialog1.Title = "Localizar Arquivos";
+
+		3- Default Extension - Representa a extensão padrão do arquivo a ser localizado: Ex: openFileDialog1.DefaultExt = "txt";
+
+		4- Filter - Representa o filtro da janela de diálogo que será usado para filtrar o tipo de arquivos a serem 
+		carregados durante a localização. O exemplo abaixo exibe somente arquivos com extensão .txt:
+		Ex: openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+
+		5- FilterIndex - Representa o indíce do filtro atualmetne selecionado na janela de diálogo: Ex:openFileDialog1.FilterIndex = 2;
+
+		6- ChecFileExists - Indica se a janela de diálogo exibirá um aviso se o usuário especificar um nome de arquivo inexistente;
+		Ex: openFileDialog1.CheckFileExists = true;
+
+		7- CheckPathExists - Indica se a janela de diálogo exibirá um aviso se o usuário especificar um caminho inexistente;
+		Ex: openFileDialog1.CheckPathExists = true;
+
+		8- FileName - Representa o nome do arquivo selecionado na janela de diálogo. Ex: textBox1.Text = openFileDialog1.FileName;
+
+		9- MultiSelect - Se esta propriedade for definida como True pode-se selecionar mais de um arquivo e FileNames representará todos
+		os arquivos selecionados. Neste caso deve-se usar um laço foreach para exibir os arquivos selecionados. 
+		     this.openFileDialog1.Multiselect = true; 
+		     foreach (String file in openFileDialog1.FileNames) 
+		     {     MessageBox.Show(file);  }
+
+		10- ReadyOnlyChecked - Indica se a caixa de verificação estará selecionada: Ex: openFileDialog1.ReadOnlyChecked = true;
+
+		11- ShowReadyOnly - Indica se a caiaxa de verificação read-only estará disponível ou não. Ex: openFileDialog1.ReadOnlyChecked = true;
+
+Tipos:
+
+		string: String de caracteres.
+		void: Vazio.
+
+Classes: Estrutura que define um determinado conjunto de objetos que possuem características em comum. Uma classe descreve as ações que podem ser realizadas por seus objetos e quais informações eles poderão armazenar. Conceitos importantes:
+
+	Instância/instance (OOP): Ocorrência concreta de um objeto. Formalmente sinônimo com objeto. Instanciação é a criação de uma Instância.
+
+	Herança de Classes: Capacidade de sub-classes de herdarem os objetos de suas classes-pai.
+
+	Encapsulamento: Separação de códigos. Deixamos a variável privada e utilizar metodos para acessa-la, deixando-a mais isolada possivel do usuário. Ou seja, encapsular significa ocultar informações, definindo que cada objeto, contém todos os detalhes de implementação necessários sobre como ele funciona e oculta os detalhes internos sobre como ele executa os serviços.	
+
+	Propriedades Autoimplementadas: Possibilitam a redução da quantidade de código necessário no momento de inplementar atributos e propriedades à uma classe.
+
+MessageBox: Exibe uma janela de mensagem, também conhecida como caixa de dialogo, que exibe uma mensagem ao usuário. Mais info em: https://docs.microsoft.com/pt-br/dotnet/api/system.windows.forms.messagebox?redirectedfrom=MSDN&view=netframework-4.7.2
+
+	E também: https://www.dotnetperls.com/messagebox-show
+
+	A ordem dos argumentos é:
+	(string, titulo em string, outros valores, outros valores)
+
+   Metodos da classe MessageBox::
+
+	MessageBox.Show: Mostra a MessageBox. È um metodo estático, ou seja, não precisamos criar nenhuma outra MessageBox() em lugar algum de nosso código.
+
+	Nota pra si: Pesquisar o que é "Metodo Estático" (Static Method - termos diferentes em outras linguas?)
+ 	
+ 	.MessageBoxButtons: Mostra botões á serem exibidos na Message Box. 
+
+ 	    MessageBoxButtons[NomeDosBotões]: Colocamos o nome dos botões da DialogBox. Por exemplo, MessageBoxButtons.YesNo, fará a Dialog box com dois botões Yes/No. Podemos adicionar uma variável para o resultado de MessageBox.Show. Por exemplo, podemos testar result1 pra saber qual botão foi apertado.
+
+ 		MessageBoxIcon.Question: Adiciona um icone de pergunta e a opção "cancel" á pergunta feita no código anterior.
+
+ 		MessageBoxDefaultButton.[nome do botão]: Especifica o botão "padrão" do argumento. Por exemplo, podemos colocar Button1 numa pergunta de Sim/Não/Cancelar, e ai o Sim será o botão padrão pré-marcado, pois ele é o primeiro (button1). Por exemplo: .MessageBoxDefaultButton.Button1.
+
+ 		DialogResult: Interrompe a lógica pra testar os resultados dos botões apertados anteriormente no dialogo. Exemplo no qual estamos os três ultimos resultados de apertos de botões:
+
+ 		if (result1 == DialogResult.Yes &&
+   		result2 == DialogResult.Yes &&
+    	result3 == DialogResult.No)
+	{
+    	MessageBox.Show("You answered yes, yes and no.");
+	}
+
+		MessageBoxOptions.RightAlign: Alinha os botões no dialogo. Nesse comando, alinhamos pela direita. Podemos usar .LeftAlign pra ir alinhar á esquerda.
+
+		MessageBoxIcon.[nome do icone]: Insere um icone na MessageBox. Por exemplo, MessageBoxIcon.Warning vai inserir um icone de aviso no dialogo.
+
+
+
+
+
+Application.Run(()): Comando comumente encontrado em program.cs. Faz com que o referido formulário execute primeiro. Exemplo: Application.Run(new FrmMenuPrincipal()); - esse código fará com que o aplicativo inicie uma nova instância do formulário MenuPrincipal.
+
+
+
+PictureBox: Comando que invoca PictureBox pra exibir uma imagem.
+
+	PictureBoxSizeMode.: Especifica como uma certa imagem é posicionada dentro da PictureBox. Seus parâmetros são Normal, StretchImage e AutoSize. É o comando sizemode das propriedades, só que em código. Por exemplo: PictureBoxSizeMode.Normal, faz a imagem ficar no tamanho normal.
+
+		.Load: Carrega um arquivo.
+
+		.Image: Age com uma imagem. Por exemplo, PictureBox.Image = Null, faz com que a imagem da PictureBox seja nula, ou seja, não tem imagem.
+
+		.Show: Abre uma janela imediatamente. Ver mais comentário aqui: https://docs.microsoft.com/pt-br/dotnet/api/system.windows.window.show?redirectedfrom=MSDN&view=netframework-4.7.2#System_Windows_Window_Show
+
+		.Visible = True/False #Torna objetos visiveis (true) ou invisiveis (false). Por exemplo, TextBox1.Visible tornaria uma Textbox invisivel.
+
+		.Hide: Esconde o conteudo.
+
+
+Control:
+
+	.Enabled: Obtém ou define um valor que indica se o controle pode ou não responder á interação do usuário.
+
+Tipos de data/Data Types pra C#:
+	- Bool(ean)
+	- Signed Integral, ou Int.
+	- Unsigned Integral. uint.
+	- Floating point. Float. Double.
+	- Char
+	- Decimal.
+
+		Os tipos usados pra armazenar números são Float, Double e Decimal.
+
+		Em caso de contas com dinheiro ou finanças, sempre utilize decimal.
+
+		Leituras úteis:
+		https://www.programiz.com/csharp-programming/variables-primitive-data-types
+		http://www.macoratti.net/12/12/c_num1.htm
+	
+
+Métodos: Determina o comportamento dos objetos de uma classe.
+	Tipos de Métodos:
+
+		Metodos de Acesso: Responsáveis pela leitura e gravação de dados. São dois, o Set e o Get.
+			Set: Leitura de dados.
+			Get: Gravação de dados.
+
+		Metodo Estático: 
+			https://pt.stackoverflow.com/questions/54012/qual-a-fun%C3%A7%C3%A3o-de-um-m%C3%A9todo-est%C3%A1tico
+
+		Parse/Análise Sintática: Uma string, quando é processada por Parse/Análise Sintática, pode ser representada como outro tipo de dado, como int. Por exemplo, a string 100. Ela pode ser representada em um int de 4 bytes.
+		Leitura interessante:
+		https://www.dotnetperls.com/parse	
+
+		Metodos de Repetição:
+
+			FOR: No laço de repetição FOR, iteramos por uma série de números. Progredimos de um ponto á outro. Geralmente, se usa i como a variável, que começa como o número 0. A maioria dos metodos de coleção em C# são baseados em zero, então o primeiro número do loop é 0. Exemplo simples:
+
+				class Program
+			{
+		    static void Main()
+		    {
+		        for (int i = 0; i < 10; i++)
+		        {
+		            Console.WriteLine(i);
+		        }
+		    }
+
+		    Valores de saida:
+		    0
+			1
+			2
+			3
+			4
+			5
+			6
+			7
+			8
+			9
+
+		    O que está acontecendo aqui? Temos um laço de incremento (ou seja, ele aumenta á cada repetição), o qual persiste em executar até i = 10 (ou algum outro valor configurado). Ao chegar no 10, ele para. 
+
+			Nota: i++ ou i-- é um "interaction statement". Ele ocorre após cada passada da iteração.
+
+			Seu oposto é um laço de decremento, onde á cada repetição do laço, o valor de i diminui. Note que aqui começamos com um 10, e continuamos até 0 chegar.
+
+
+		    class Program
+			{
+			    static void Main()
+			    {
+			        for (int i = 10 - 1; i >= 0; i--)
+			        {
+			            Console.WriteLine(i);
+			        }
+			    }
+			}
+
+			Output
+
+			9
+			8
+			7
+			6
+			5
+			4
+			3
+			2
+			1
+			0
+
+			Aqui ocorre o oposto: Á cada repetição do laço, o valor de i diminui, até chegar á 0.
+
+
+
+			Passo de Iteração: O terceiro parâmetro do laço de repetição FOR é o passo. Ele pode mudar a variável i ou qualquer outra por qualquer quantidade - a constante nem é necessária.
+				ex: Adicionamos dois após cada passagem pelo laço de repetição.
+
+			class Program
+			{
+			    static void Main()
+			    {
+			        for (int i = 0; i < 10; i += 2)
+			        {
+			            Console.WriteLine(i);
+			        }
+			    }
+			}
+
+			Output
+
+			0
+			2
+			4
+			6
+			8	
+
+
+			Passo de decrementação: O mesmo do acima, porém para trás.
+
+			class Program
+			{
+			    static void Main()
+			    {
+			        for (int i = 10 - 1; i >= 0; i -= 2)
+			        {
+			            Console.WriteLine(i);
+			        }
+			    }
+			}
+
+			Output
+
+			9
+			7
+			5
+			3
+			1
+
+
+			Expressão, quantidade máxima: Expressões completas e até mesmo chamada de Métodos, pode ser usados como condições de um Laço de Repetição For. ex:
+
+			class Program
+			{
+			    static void Main()
+			    {
+			        for (int i = 0; i < (20 / 2); i += 2)
+			        {
+			            Console.WriteLine(i);
+			        }
+			    }
+			}
+
+			Output
+
+			0
+			2
+			4
+			6
+			8
+
+			O que aconteceu aqui:
+
+
+
+			Leitura recomendada: https://www.dotnetperls.com/for
+
+	ToString: Metodo virtual. Retorna uma representação de string. É um metodo	
+
+

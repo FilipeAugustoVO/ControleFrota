@@ -1,0 +1,21 @@
+Aplicativo Controle de Frota
+
+Objetivo básico: Inserir e salvar informações, que servem para controlar uma frota de Carros e Caminhões.
+
+1. Criar uma interface simples para inserir os dados dos carros e caminhões.
+
+2. Criar uma classe chamada Veiculo.
+
+3. A Classe Veiculo tem três propriedades: 
+- Modelo (representa o modelo do veiculo. É possivel ter várias quantidades do mesmo modelo)
+- Placa (representa a placa do veiculo referido, cada veiculo tem uma placa diferente)
+- Km (Quantos quilometros em total o carro rodou. Km é geralmente uma maneira fácil de determinar quão antigo o carro é)
+
+4. A classe Veiculo contém duas sub-classes, com as seguintes propriedades:
+- Carro (Modelo, Placa, Km)
+- Caminhao (Modelo, Placa, Km, Eixos)
+
+5. Ao escolher o botão caminhão, a textbox Eixos aparece. Ao escolher carro, ela é escondida.
+
+6. O botão salvar salva as informações inseridas.
+

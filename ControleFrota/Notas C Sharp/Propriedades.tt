@@ -1,0 +1,52 @@
+Esse é o meu arquivo de Programação de Propriedades de Visual Studio em C#.
+
+
+Propriedades:
+
+
+	AppendText: Exibe todo o conteúdo desejado simultaneamente.
+
+	Background Color: Altera cor do pano de fundo do aplicativo.
+
+		Nota: A cor bacaninha cinza do Windows é a cor Control, no System.
+
+
+	Border Style: Indica se o painel deve ter uma borda.
+	
+		Fixed Single: Impede o redimensionamento da border durante execução do programa, deixando-a fixa.	
+
+
+	Font: Altera a fonte de texto de formulários e tal, tipo de fonte, tamanho, etc.	
+
+
+	FormBorderStyle: Indica a aparência e ação  da borda e da barra de titulo da Forma.
+
+		FixedSingle: Impede redimensionamento da janela durante a execução do programa, deixando ela fixa.
+
+	Start Position: Determina a posição da forma quando ela aparece/inicia.
+
+		Center Screen: Deixa o formulário centralizado na tela quando estiver em execuão.
+
+	Icon: Altera icone do formulário na janela.			
+
+
+	MaximizeBox: Determina se a forma tem o botãozinho de maximize box ativo na janela.
+
+	Newline: String que denota nova linha. A mesma coisa que "\r\n" pra plataformas não-Unix, ou simplesmten \n para plataformas Unix.
+
+		Enviroment.Newline: Uma maneira "universal" de declarar Nova Linha, de modo que funciona em qualquer sistema operacional.
+
+	Leituras recomendadas: 
+	https://www.dotnetperls.com/newline
+	https://docs.microsoft.com/en-us/dotnet/api/system.environment.newline?view=netframework-4.7.2	
+
+
+	Sizemode: Acessada pelo componente PictureBox, temos acesso á propriedade SizeMode, na qual define a maneira em que a imagem será exibida no formulário. Ela tem as seguintes opções:
+
+		Normal - a imagem é exibida em seu tamanho normal e sempre é posicionada a partir do canto superior do componente; caso a imagem seja maior que a PictureBox, ela será cortada.
+
+		StretchImage - a imagem é ajustada automaticamente ao tamanho do PictureBox.
+
+		AutoSize - o PictureBox altera seu tamannho automaticamente, para se ajustar ao tamanho da imagem.
+
+	Text: Texto exibido no elemento.	

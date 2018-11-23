@@ -1,0 +1,12 @@
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\obj\Debug\ControleFrota.ControleFrota.resources
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\obj\Debug\ControleFrota.Properties.Resources.resources
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\obj\Debug\ControleFrota.csproj.GenerateResource.cache
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\obj\Debug\ControleFrota.csproj.CoreCompileInputs.cache
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\bin\Debug\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\bin\Debug\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\bin\Debug\ControleFrota.exe.config
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\bin\Debug\ControleFrota.exe
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\bin\Debug\ControleFrota.pdb
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\obj\Debug\ControleFrota.csprojAssemblyReference.cache
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\obj\Debug\ControleFrota.exe
+C:\Users\Convidado\Desktop\Projetos C Sharp\ControleFrota\ControleFrota\ControleFrota\obj\Debug\ControleFrota.pdb

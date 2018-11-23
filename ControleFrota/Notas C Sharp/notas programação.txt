@@ -1,0 +1,81 @@
+
+Links importantes: 
+https://docs.microsoft.com/en-us/visualstudio/ide/tutorial-1-create-a-picture-viewer?view=vs-2017
+
+https://docs.microsoft.com/en-us/azure/devops/repos/git/share-your-code-in-git-vs-2017?toc=%2Fvisualstudio%2Fversion-control%2Ftoc.json&bc=%2Fazure%2Fdevops%2Frepos%2Fgit%2Fbreadcrumb%2Fvc%2Ftoc.json&view=vsts
+
+https://docs.microsoft.com/pt-br/azure/devops/repos/git/pushing?view=vsts&tabs=visual-studio
+
+
+https://stackoverflow.com/questions/11008786/c-sharp-windows-form-application-switching-between-multiple-forms
+
+https://www.homeandlearn.co.uk/csharp/csharp_s13p1.html - como fazer um novo formulário aparecer com um click de botão:
+
+Esse código é um bom exemplo:
+
+ private void btnCheckBox_Click(object sender, EventArgs e)
+        private void btnCheckBox_Click(object sender, EventArgs e)
+        {
+            FrmPropriedadesCheckBox segundoForm = new FrmPropriedadesCheckBox(); //criação e execução do objeto SegundoForm
+
+            segundoForm.Show();
+        }
+
+Pra prevenir a criação de um milhão de janelas, mova o código que cria a forma para fora do botão. Assim:
+
+		FrmPropriedadesCheckBox segundoForm = new FrmPropriedadesCheckBox(); //criação e execução do objeto SegundoForm
+
+        private void btnCheckBox_Click(object sender, EventArgs e)
+        {
+            segundoForm.Show();
+        }
+
+
+Como abrir nova forma e fechar anterior com um clique de botão:
+https://stackoverflow.com/questions/5548746/c-sharp-open-a-new-form-then-close-the-current-form
+
+ private void OnButton1Click(object sender, EventArgs e)
+{
+    this.Hide();
+    var form2 = new Form2();
+    form2.Closed += (s, args) => this.Close(); 
+    form2.Show();
+}       
+
+https://www.codeproject.com/Questions/81324/Open-a-new-form-and-close-the-current-without-hidi
+
+Tutorial de MessageBoxes:
+https://www.dotnetperls.com/messagebox-show
+
+Melhor maneira de checar se uma TextBox está cheia ou vázia:
+string.IsNullOrEmpty(TextBox.Text)
+
+ou
+
+string.IsNullOrWhiteSpace(TextBox.Text)
+
+A segunda é melhor, porque ela evita que o programa considere alguns espaços criados pela barra de espaço ou algo assim como "input". Ela checa tudo que o primeiro faz.
+
+https://stackoverflow.com/questions/34298857/best-way-to-check-whether-a-textbox-is-empty-or-not/34299121
+
+
+Passos que faltam ao programa PrimeiroPrograma:
+frmPropriedadesCheckBox: 
+1. Tornar os paineis pnlPessoaFisica e pnlPessoaJuridica invisiveis por padrão, ao iniciar programa. - FEITO
+2. Tornar visível o painél corresponde ao botão checkbox pressionado corretamente: - FEITO
+	2a. Se a checkbox Pessoa Fisica (chkPessoaFisica) for selecionada, deve aparecer o painel de Pessoa Fisica (pnlPessoaFisica), e esconder o painel de Pessoa Juridica (pnlPessoaJuridica).
+	2b. Se a checkbox Pessoa Juridica (chkPessoaJuridica) for selecionada, deve aparecer o painel de Pessoa Juridica (pnlPessoaJuridica), e esconder o painel de Pessoa Fisica (pnlPessoaJuridica).
+
+frmVisualizadorImagens:
+1. Inserir imagem de moldura na PictureBox. -= FEITO
+	1a. Encontrar imagem apropriada
+	1b. Colocar a imagem no programa
+2. Reduzir PictureBox para tamanho correto, de moldura. - FEITO
+3. Ativar botão Mostrar Imagem (btnMostrarImagem), de modo que ao ser clicado, ele permite carregar e mostrar uma imagem.
+4. Ativar o botão limpar imagem, usando a função clear(). - FEITO
+5. Ativar botão Stretch.
+6. Ativar botão Normal.	
+7. Desabilitar botão Mostrar Imagem, caso não tenha imagem.
+
+
+Como fazer a
